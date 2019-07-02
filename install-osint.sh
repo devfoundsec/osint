@@ -10,15 +10,6 @@ bgred='\e[41m'
 # Status
 correct="[\e[1m\e[92;1m ✔ $end]"
 incorrect="[\e[1m\e[91;1m ✘ $end]"
-# Arts
-banner="$(cat ./ascii-art)"
-
-echo "$banner" | while read line
-  do
-    printf "$yellow$line$end\r"
-    sleep 0.01
-    echo -e "\e[38;5;202;1m$line$end"
-  done
 
 _install_pip(){
   pip_version="$(ls -v /usr/local/bin/pip* | tail -n1 || printf 'pip')"
@@ -46,3 +37,5 @@ _install_git 'https://github.com/sherlock-project/sherlock.git'
 _install_pip '-r sherlock/requirements.txt'
 # Install osrframework
 _run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
+
+cat ascii-art.sh >> ~/.bashrc
