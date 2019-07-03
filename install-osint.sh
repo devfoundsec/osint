@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+# Fix problems of directories
+here=`dirname "$0"`
+cd "$here"
 # colors
 orange='\e[93m'
 yellow='\e[93m'
@@ -18,9 +21,11 @@ _install_pip(){
   eval "$run" && echo -e "$correct Installed(s): $1" || echo -e "$incorrect Error in install of: $1" 
 } 
 _install_git(){
+  cd "/workspace"
   run="git clone $1"
   echo -e "Run: $orange$run$end"
   eval "$run" && echo -e "$correct Installed(s): $1" || echo -e "$incorrect Error in install of: $1" 
+  cd "$here"
 }
 _run(){
   echo -e "Run: $orange$1$end"
@@ -31,10 +36,16 @@ _run(){
 _run 'go get github.com/graniet/operative-framework'
 # Install D4N155
 _install_git 'https://github.com/OWASP/D4N155.git'
-_install_pip '-r D4N155/requirements.txt'
-# Install sherlock
+_install_pip '-r /workspace/D4N155/requirements.txt'
+# Install Sherlock
 _install_git 'https://github.com/sherlock-project/sherlock.git'
-_install_pip '-r sherlock/requirements.txt'
+_install_pip '-r /workspace/sherlock/requirements.txt'
+# Install PhoneInfoga
+_install_git 'https://github.com/sundowndev/PhoneInfoga'
+_install_pip '-r /workspace/PhoneInfoga/requirements.txt'
+# Install Karma
+_install_pip 'git+https://github.com/decoxviii/karma.git'
+
 # Install osrframework
 _run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
 
