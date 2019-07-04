@@ -46,6 +46,9 @@ _install_pip '-r /workspace/PhoneInfoga/requirements.txt'
 _run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
 # Install Karma
 _install_pip 'git+https://github.com/decoxviii/karma.git'
+# Install SE Toolkit 
+_install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
+_install_pip '-r /workspace/social-engineer-toolkit/requirements.txt'
 
 # Install osrframework
 _run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
