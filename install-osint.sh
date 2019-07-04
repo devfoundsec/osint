@@ -51,3 +51,6 @@ _install_pip 'git+https://github.com/decoxviii/karma.git'
 _run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
 
 cat ascii-art.sh >> ~/.bashrc
+# Install SE Toolkit 
+_install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
+_install_pip '-r /set/requirements.txt'
