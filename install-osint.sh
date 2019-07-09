@@ -60,3 +60,11 @@ cat ascii-art.sh >> ~/.bashrc
 # Install SE Toolkit 
 _install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
 _install_pip '-r /set/requirements.txt'
+
+# Install OpenVas
+_install_git 'https://github.com/greenbone/openvas.git'
+
+# Install  The Harvester
+_install_git 'https://github.com/laramies/theHarvester.git'
+_install_git '-r /workspace/theHarvester/requirements.txt' 
+
