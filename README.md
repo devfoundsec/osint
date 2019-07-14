@@ -12,12 +12,12 @@ The image wa wrote for Security Osint with tools:
   -  Operative-framework
   -  D4N155
   -  Sherlock
-	-  PhoneInfoga
-	-  Karma
-	-  SE Toolkit 
-	-  Recon-ng
-	-  SE Toolkit 
-	-  OpenVas
-	-  The Harvester
+  -  PhoneInfoga
+  -  Karma
+  -  SE Toolkit 
+  -  Recon-ng
+  -  SE Toolkit 
+  -  OpenVas
+  -  The Harvester
   -  Whois
 
