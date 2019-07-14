@@ -8,7 +8,7 @@ docker run -it scorpionsec/osint:unstable bash
 ```
 
 # About
-The image wa wrote for Security Osint with tools:
+The image was wrote for Security Osint with tools:
   -  Operative-framework
   -  D4N155
   -  Sherlock
