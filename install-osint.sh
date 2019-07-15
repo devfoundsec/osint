@@ -52,19 +52,19 @@ _install_pip '-r /workspace/social-engineer-toolkit/requirements.txt'
 # Install Recon-ng
 _install_git 'https://bitbucket.org/LaNMaSteR53/recon-ng.git'
 _install_pip '-r /workspace/recon-ng/REQUIREMENTS'
+# Install SE Toolkit 
+_install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
+_install_pip '-r /set/requirements.txt'
+# Install OpenVas
+_install_git 'https://github.com/greenbone/openvas.git'
+# Install The Harvester
+_install_git 'https://github.com/laramies/theHarvester.git'
+_install_git '-r /workspace/theHarvester/requirements.txt' 
+# Install Whois
+_run 'apt install whois -y'
 
 # Install osrframework
 _run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
 
 cat ascii-art.sh >> ~/.bashrc
-# Install SE Toolkit 
-_install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
-_install_pip '-r /set/requirements.txt'
-
-# Install OpenVas
-_install_git 'https://github.com/greenbone/openvas.git'
-
-# Install  The Harvester
-_install_git 'https://github.com/laramies/theHarvester.git'
-_install_git '-r /workspace/theHarvester/requirements.txt' 
 
