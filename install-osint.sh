@@ -13,7 +13,7 @@ bgred='\e[41m'
 # Status
 correct="[\e[1m\e[92;1m ✔ $end]"
 incorrect="[\e[1m\e[91;1m ✘ $end]"
-pip3="$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip')"
+pip2="$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip')"
 
 _install_pip(){
   pip_version="$(ls -v /usr/local/bin/pip* | tail -n1 || printf 'pip')"
@@ -69,7 +69,6 @@ _install_git 'https://github.com/darkoperator/dnsrecon.git'
 _run "$pip2 install -r /workspace/dnsrecon/requirements.txt --user"
 # Install Whois
 _run 'apt install whois -y'
-
 # Install osrframework
 _run "$pip2 install osrframework --user"
 
