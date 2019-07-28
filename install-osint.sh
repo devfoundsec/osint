@@ -13,6 +13,7 @@ bgred='\e[41m'
 # Status
 correct="[\e[1m\e[92;1m ✔ $end]"
 incorrect="[\e[1m\e[91;1m ✘ $end]"
+pip3="$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip')"
 
 _install_pip(){
   pip_version="$(ls -v /usr/local/bin/pip* | tail -n1 || printf 'pip')"
@@ -54,17 +55,23 @@ _install_git 'https://bitbucket.org/LaNMaSteR53/recon-ng.git'
 _install_pip '-r /workspace/recon-ng/REQUIREMENTS'
 # Install SE Toolkit 
 _install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
-_install_pip '-r /set/requirements.txt'
+_install_pip '-r /workspace/social-engineer-toolkit/requirements.txt'
 # Install OpenVas
 _install_git 'https://github.com/greenbone/openvas.git'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_install_git '-r /workspace/theHarvester/requirements.txt' 
+_install_pip '-r /workspace/theHarvester/requirements.txt'
+# Install Cr3dOv3r
+_install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
+_install_pip '-r /workspace/Cr3d0v3r/requirements.txt'
+# Install DNSRecon
+_install_git 'https://github.com/darkoperator/dnsrecon.git'
+_run "$pip2 install -r /workspace/dnsrecon/requirements.txt --user"
 # Install Whois
 _run 'apt install whois -y'
 
 # Install osrframework
-_run "$(ls -v /usr/local/bin/pip2* | head -n1 || printf 'pip') install osrframework --user"
+_run "$pip2 install osrframework --user"
 
 cat ascii-art.sh >> ~/.bashrc
 
