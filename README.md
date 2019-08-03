@@ -20,4 +20,7 @@ The image was wrote for Security Osint with tools:
   -  OpenVas
   -  The Harvester
   -  Whois
+  -  osrframework
+  -  R3dOv3r
+  -  Buster 
 
