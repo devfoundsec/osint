@@ -72,5 +72,8 @@ _run "cd workspace/buster;python3 setup.py install;cd $here"
 _run 'apk add whois nmap'
 # Install osrframework
 _install_pip 'pip2' 'osrframework'
+# Install InstagramOsint
+_install_git 'https://github.com/sc1341/InstagramOSINT.git'
+_install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
 
 cat ascii-art.sh >> ~/.bashrc
