@@ -76,5 +76,8 @@ _install_pip 'pip2' 'osrframework'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
+# Install Datasploit
+_install_git 'https://github.com/dvopsway/datasploit.git'
+_install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
 
 cat ascii-art.sh >> ~/.bashrc
