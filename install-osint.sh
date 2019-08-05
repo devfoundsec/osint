@@ -80,4 +80,8 @@ _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
 _install_git 'https://github.com/dvopsway/datasploit.git'
 _install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
 
+# Install editor
+_run 'apk add vim'
+
+# Add Ascii art to bashrc
 cat ascii-art.sh >> ~/.bashrc
