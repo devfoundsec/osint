@@ -27,5 +27,6 @@ The image was wrote for Security Osint with tools:
   -  R3dOv3r: __Know the dangers of credential reuse attacks__
   -  Buster: __Find emails of a person and return info associated with them__
   -  InstagramOsint: __An Instagram Open Source Intelligence Tool__ 
+  -  Datasploit: __A tool to perform various OSINT techniques__
 
 
