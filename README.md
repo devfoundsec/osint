@@ -28,5 +28,5 @@ The image was wrote for Security Osint with tools:
   -  Buster: __Find emails of a person and return info associated with them__
   -  InstagramOsint: __An Instagram Open Source Intelligence Tool__ 
   -  Datasploit: __A tool to perform various OSINT techniques__
-
+  -  Cloufail: __Utilize misconfigured DNS and old database records to find hidden IP's behind the CloudFlare network__
 
