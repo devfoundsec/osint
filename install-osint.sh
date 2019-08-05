@@ -10,6 +10,7 @@ green='\e[92m'
 red='\e[91m'
 end='\e[0m'
 bgred='\e[41m'
+bold='\e[1m'
 # Status
 correct="[\e[1m\e[92;1m ✔ $end]"
 incorrect="[\e[1m\e[91;1m ✘ $end]"
@@ -37,7 +38,7 @@ _install_pip 'pip3' 'cython'
 # Operative-framework
 _run 'go get github.com/graniet/operative-framework'
 # Install D4N155
-_install_git 'https://github.com/OWASP/D4N155.git'
+_install_git 'https://githu b.com/OWASP/D4N155.git'
 _install_pip 'pip3' '-r /workspace/D4N155/requirements.txt'
 # Install Sherlock
 _install_git 'https://github.com/sherlock-project/sherlock.git'
@@ -86,5 +87,27 @@ _install_pip 'pip3' '-r /workspace/Cloudfail/requirements.txt'
 # Install editor
 _run 'apk add vim'
 
-# Add Ascii art to bashrc
-cat ascii-art.sh >> ~/.bashrc
+# Banner
+banner="\
+$bold Operative-framework$end: operative framework is a OSINT investigation framework
+$bold D4N155$end: Intelligent and dynamic wordlist using OSINT
+$bold Sherlock$end: Find usernames across social networks
+$bold PhoneInfoga$end: Advanced information gathering & OSINT tool for phone numbers
+$bold Karma$end: Find leaked emails with your passwords
+$bold Recon-ng$end: Recon-ng is a full-featured Web Reconnaissance framework written in Python
+$bold SE Toolkit$end: The Social-Engineer Toolkit
+$bold OpenVas$end: Open Vulnerability Assessment Scanner 
+$bold The Harvester$end: E-mails, subdomains and names Harvester - OSINT
+$bold Whois$end: Get whois data
+$bold osrframework$end: Open Sources Research Framework
+$bold R3dOv3r$end: Know the dangers of credential reuse attacks
+$bold Buster$end: Find emails of a person and return info associated with them
+$bold InstagramOsint$end: An Instagram Open Source Intelligence Tool 
+$bold Datasploit$end: A tool to perform various OSINT techniques
+$bold Cloufail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network"
+
+
+# bashrc
+_run 'wget https://raw.githubusercontent.com/SCORP1ON-TEAM/scorpion-bash/master/.bashrc -O .bashrc'
+cat .bashrc >> ~/.bashrc
+echo -e "$banner" >> ~/.bashrc
