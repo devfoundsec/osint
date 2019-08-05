@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
 # Fix problems of directories
 here="`dirname "$0"`"
@@ -79,6 +79,9 @@ _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
 # Install Datasploit
 _install_git 'https://github.com/dvopsway/datasploit.git'
 _install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
+# Install Cloudfail
+_install_git 'https://github.com/m0rtem/CloudFail.git'
+_install_pip 'pip3' '-r /workspace/Cloudfail/requirements.txt'
 
 # Install editor
 _run 'apk add vim'
