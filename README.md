@@ -3,12 +3,12 @@
 </p>
 
 # OSINT 
-Docker image for osint tools, in progress
+Docker image for osint tools
 
 # Run
 ```docker
-docker pull scorpionsec/osint:unstable
-docker run -it scorpionsec/osint:unstable bash
+docker pull scorpionsec/osint
+docker run -it scorpionsec/osint bash
 ```
 
 # About
