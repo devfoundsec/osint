@@ -11,6 +11,7 @@ red='\e[91m'
 end='\e[0m'
 bgred='\e[41m'
 bold='\e[1m'
+bwhite='\e[1;97m'
 # Status
 correct="[\e[1m\e[92;1m ✔ $end]"
 incorrect="[\e[1m\e[91;1m ✘ $end]"
@@ -88,26 +89,30 @@ _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
 _run 'apk add vim'
 
 # Banner
-banner="\
-$bold Operative-framework$end: operative framework is a OSINT investigation framework
-$bold D4N155$end: Intelligent and dynamic wordlist using OSINT
-$bold Sherlock$end: Find usernames across social networks
-$bold PhoneInfoga$end: Advanced information gathering & OSINT tool for phone numbers
-$bold Karma$end: Find leaked emails with your passwords
-$bold Recon-ng$end: Recon-ng is a full-featured Web Reconnaissance framework written in Python
-$bold SE Toolkit$end: The Social-Engineer Toolkit
-$bold OpenVas$end: Open Vulnerability Assessment Scanner 
-$bold The Harvester$end: E-mails, subdomains and names Harvester - OSINT
-$bold Whois$end: Get whois data
-$bold osrframework$end: Open Sources Research Framework
-$bold R3dOv3r$end: Know the dangers of credential reuse attacks
-$bold Buster$end: Find emails of a person and return info associated with them
-$bold InstagramOsint$end: An Instagram Open Source Intelligence Tool 
-$bold Datasploit$end: A tool to perform various OSINT techniques
-$bold Cloufail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network"
+banner="
+
+\t\t ~$bwhite TOOLS $end~
+\t$bwhite Operative-framework$end: operative framework is a OSINT investigation framework
+\t$bwhite D4N155$end: Intelligent and dynamic wordlist using OSINT
+\t$bwhite Sherlock$end: Find usernames across social networks
+\t$bwhite PhoneInfoga$end: Advanced information gathering & OSINT tool for phone numbers
+\t$bwhite Karma$end: Find leaked emails with your passwords
+\t$bwhite Recon-ng$end: Recon-ng is a full-featured Web Reconnaissance framework written in Python
+\t$bwhite SE Toolkit$end: The Social-Engineer Toolkit
+\t$bwhite OpenVas$end: Open Vulnerability Assessment Scanner 
+\t$bwhite The Harvester$end: E-mails, subdomains and names Harvester - OSINT
+\t$bwhite Whois$end: Get whois data
+\t$bwhite osrframework$end: Open Sources Research Framework
+\t$bwhite R3dOv3r$end: Know the dangers of credential reuse attacks
+\t$bwhite Buster$end: Find emails of a person and return info associated with them
+\t$bwhite InstagramOsint$end: An Instagram Open Source Intelligence Tool 
+\t$bwhite Datasploit$end: A tool to perform various OSINT techniques
+\t$bwhite Cloufail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network
+
+"
 
 
 # bashrc
 _run 'wget https://raw.githubusercontent.com/Scorpion-Cyber-Security/vault-bash/master/.bashrc -O .bashrc'
 cat .bashrc >> ~/.bashrc
-echo -e "echo '''$banner'''" >> ~/.bashrc
+echo -e "printf \"\"\"$banner\"\"\"" >> ~/.bashrc
