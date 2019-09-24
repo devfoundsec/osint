@@ -82,7 +82,7 @@ _install_git 'https://github.com/dvopsway/datasploit.git'
 _install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
 # Install Cloudfail
 _install_git 'https://github.com/m0rtem/CloudFail.git'
-_install_pip 'pip3' '-r /workspace/Cloudfail/requirements.txt'
+_install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
 
 # Install editor
 _run 'apk add vim'
@@ -108,6 +108,6 @@ $bold Cloufail$end: Utilize misconfigured DNS and old database records to find h
 
 
 # bashrc
-_run 'wget https://raw.githubusercontent.com/SCORP1ON-TEAM/scorpion-bash/master/.bashrc -O .bashrc'
+_run 'wget https://raw.githubusercontent.com/Scorpion-Cyber-Security/vault-bash/master/.bashrc -O .bashrc'
 cat .bashrc >> ~/.bashrc
-echo -e "$banner" >> ~/.bashrc
+echo -e "echo '''$banner'''" >> ~/.bashrc
