@@ -1,10 +1,14 @@
+<p align="center">
+		<img src="img/vcb.gif" height=200 alt="Scorpion-Osint">
+</p>
+
 # OSINT 
-Docker image for osint tools, in progress
+Docker image for osint tools with Vault Cyber Security
 
 # Run
 ```docker
-docker pull scorpionsec/osint:unstable
-docker run -it scorpionsec/osint:unstable bash
+docker pull vaultsecurity/osint
+docker run -it vaultsecurity/osint bash
 ```
 
 # About
@@ -23,4 +27,6 @@ The image was wrote for Security Osint with tools:
   -  R3dOv3r: __Know the dangers of credential reuse attacks__
   -  Buster: __Find emails of a person and return info associated with them__
   -  InstagramOsint: __An Instagram Open Source Intelligence Tool__ 
+  -  Datasploit: __A tool to perform various OSINT techniques__
+  -  Cloudfail: __Utilize misconfigured DNS and old database records to find hidden IP's behind the CloudFlare network__
 

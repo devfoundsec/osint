@@ -9,3 +9,4 @@ RUN apk update && apk add python2 python3 git bash gcc g++ libxslt-dev freetds-d
   && rm -rf *tar.gz
 ENV PATH /usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/packages/src:/usr/local/go/bin
 RUN bash /packages/src/install-osint.sh
+ENTRYPOINT /bin/bash
