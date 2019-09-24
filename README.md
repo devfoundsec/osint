@@ -7,8 +7,8 @@ Docker image for osint tools with Vault Cyber Security
 
 # Run
 ```docker
-docker pull vaultcybersecurity/osint
-docker run -it vaultcybersecurity/osint bash
+docker pull vaultsecurity/osint
+docker run -it vaultsecurity/osint bash
 ```
 
 # About
