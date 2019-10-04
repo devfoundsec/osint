@@ -49,7 +49,6 @@ _install_git 'https://github.com/sundowndev/PhoneInfoga'
 _install_pip 'pip3' '-r /workspace/PhoneInfoga/requirements.txt'
 _run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
 # Install Karma
-
 _install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git'
 # Install SE Toolkit 
 _install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
@@ -75,6 +74,7 @@ _run "cd workspace/buster;python3 setup.py install;cd $here"
 _run 'apk add whois nmap'
 # Install osrframework
 _install_pip 'pip2' 'osrframework'
+_run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
