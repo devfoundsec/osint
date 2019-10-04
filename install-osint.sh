@@ -75,6 +75,7 @@ _run 'apk add whois nmap'
 # Install osrframework
 _install_pip 'pip2' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
+_run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
