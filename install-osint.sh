@@ -69,6 +69,7 @@ _install_git 'https://github.com/darkoperator/dnsrecon.git'
 _install_pip 'pip2' '-r /workspace/dnsrecon/requirements.txt'
 # Install Buster
 _install_git 'https://github.com/sham00n/buster.git'
+_install_pip 'pip3' 'numpy'
 _run "cd workspace/buster;python3 setup.py install;cd $here"
 # Install Whois
 _run 'apk add whois nmap'
