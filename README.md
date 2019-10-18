@@ -29,4 +29,5 @@ The image was wrote for Security Osint with tools:
   -  InstagramOsint: __An Instagram Open Source Intelligence Tool__ 
   -  Datasploit: __A tool to perform various OSINT techniques__
   -  Cloudfail: __Utilize misconfigured DNS and old database records to find hidden IP's behind the CloudFlare network__
+  -  WAFW00F: __WAFW00F identifies and fingerprints Web Application Firewall (WAF) products__
 
