@@ -3,8 +3,8 @@ Docker image for osint tools, in progress
 
 # Run
 ```docker
-docker pull scorpionsec/osint:unstable
-docker run -it scorpionsec/osint:unstable bash
+docker pull vaultsecurity/osint:beta
+docker run -it vaultsecurity/osint:beta bash
 ```
 
 # About
