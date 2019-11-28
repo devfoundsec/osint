@@ -3,8 +3,8 @@ Docker image for osint tools, in progress
 
 # Run
 ```docker
-docker pull vaultsecurity/osint:beta
-docker run -it vaultsecurity/osint:beta bash
+docker pull vaultsecurity/osint
+docker run -it vaultsecurity/osint bash
 ```
 
 # About
