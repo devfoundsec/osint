@@ -1,5 +1,5 @@
 <p align="center">
-		<img src="img/vcb.gif" height=200 alt="Scorpion-Osint">
+		<img src="img/logo.gif" height=200 alt="Vault-Osint">
 </p>
 
 # OSINT 
