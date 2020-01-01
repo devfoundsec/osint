@@ -86,6 +86,9 @@ _install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
 # Install Cloudfail
 _install_git 'https://github.com/m0rtem/CloudFail.git'
 _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
+# Install WAFW00f
+_install_git 'https://github.com/EnableSecurity/wafw00f.git'
+_run "cd workspace/wafw00f;python3 setup.py install;cd $here"
 
 # Install editor
 _run 'apk add vim'
