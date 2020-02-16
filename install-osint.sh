@@ -48,13 +48,13 @@ _install_pip 'pip3' '-r /workspace/sherlock/requirements.txt'
 _install_git 'https://github.com/sundowndev/PhoneInfoga'
 _install_pip 'pip3' '-r /workspace/PhoneInfoga/requirements.txt'
 _run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
-# Install Karma
-_install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git'
+# Install Karma'
+_install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git --upgrade'
 # Install SE Toolkit 
 _install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
 _install_pip 'pip3' '-r /workspace/social-engineer-toolkit/requirements.txt'
 # Install Recon-ng
-_install_git 'https://bitbucket.org/LaNMaSteR53/recon-ng.git'
+_install_git 'https://github.com/lanmaster53/recon-ng.git'
 _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
 # Install OpenVas
 _install_git 'https://github.com/greenbone/openvas.git'
@@ -74,7 +74,7 @@ _run "cd workspace/buster;python3 setup.py install;cd $here"
 # Install Whois
 _run 'apk add whois nmap'
 # Install osrframework
-_install_pip 'pip2' 'osrframework'
+_install_pip 'pip3' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
 _run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
 # Install InstagramOsint
@@ -82,7 +82,7 @@ _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
 # Install Datasploit
 _install_git 'https://github.com/dvopsway/datasploit.git'
-_install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
+_install_pip 'pip2' '--force-reinstall -r /workspace/datasploit/requirements.txt'
 # Install Cloudfail
 _install_git 'https://github.com/m0rtem/CloudFail.git'
 _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
