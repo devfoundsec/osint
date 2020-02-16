@@ -39,7 +39,7 @@ _install_pip 'pip3' 'cython'
 # Operative-framework
 _run 'go get github.com/graniet/operative-framework'
 # Install D4N155
-_install_git 'https://githu b.com/OWASP/D4N155.git'
+_install_git 'https://github.com/OWASP/D4N155.git'
 _install_pip 'pip3' '-r /workspace/D4N155/requirements.txt'
 # Install Sherlock
 _install_git 'https://github.com/sherlock-project/sherlock.git'
@@ -112,7 +112,7 @@ banner="
 \t$bwhite Buster$end: Find emails of a person and return info associated with them
 \t$bwhite InstagramOsint$end: An Instagram Open Source Intelligence Tool 
 \t$bwhite Datasploit$end: A tool to perform various OSINT techniques
-\t$bwhite Cloufail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network
+\t$bwhite Cloudfail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network
 
 "
 
