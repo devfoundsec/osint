@@ -60,7 +60,7 @@ _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
 _install_git 'https://github.com/greenbone/openvas.git'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_install_pip 'pip3' '-r /workspace/theHarvester/requirements.txt'
+_install_pip 'pip3' '-r /workspace/theHarvester/requirements/base.txt'
 # Install Cr3dOv3r
 _install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
 _install_pip 'pip3' '-r /workspace/Cr3dOv3r/requirements.txt'
@@ -70,7 +70,7 @@ _install_pip 'pip2' '-r /workspace/dnsrecon/requirements.txt'
 # Install Buster
 _install_git 'https://github.com/sham00n/buster.git'
 _install_pip 'pip3' 'numpy'
-_run "cd workspace/buster;python3 setup.py install;cd $here"
+_run "cd /workspace/buster;python3 setup.py install;cd $here"
 # Install Whois
 _run 'apk add whois nmap'
 # Install osrframework
