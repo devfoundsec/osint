@@ -37,7 +37,7 @@ _run(){
 
 _install_pip 'pip3' 'cython'
 # Operative-framework
-_run 'go get github.com/graniet/operative-framework'
+#_run 'go get github.com/graniet/operative-framework'
 # Install D4N155
 _install_git 'https://github.com/OWASP/D4N155.git'
 _install_pip 'pip3' '-r /workspace/D4N155/requirements.txt'
@@ -97,7 +97,7 @@ _run 'apk add vim'
 banner="
 
 \t\t ~$bwhite TOOLS $end~
-\t$bwhite Operative-framework$end: operative framework is a OSINT investigation framework
+\t$red We can help for install this framework [Update broken] → $bwhite Operative-framework$end: operative framework is a OSINT investigation framework
 \t$bwhite D4N155$end: Intelligent and dynamic wordlist using OSINT
 \t$bwhite Sherlock$end: Find usernames across social networks
 \t$bwhite PhoneInfoga$end: Advanced information gathering & OSINT tool for phone numbers
