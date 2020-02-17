@@ -37,7 +37,7 @@ _run(){
 
 _install_pip 'pip3' 'cython'
 # Operative-framework
-_run 'go get github.com/graniet/operative-framework'
+#_run 'go get github.com/graniet/operative-framework'
 # Install D4N155
 _install_git 'https://github.com/OWASP/D4N155.git'
 _install_pip 'pip3' '-r /workspace/D4N155/requirements.txt'
@@ -48,19 +48,19 @@ _install_pip 'pip3' '-r /workspace/sherlock/requirements.txt'
 _install_git 'https://github.com/sundowndev/PhoneInfoga'
 _install_pip 'pip3' '-r /workspace/PhoneInfoga/requirements.txt'
 _run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
-# Install Karma
-_install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git'
+# Install Karma'
+_install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git --upgrade'
 # Install SE Toolkit 
 _install_git 'https://github.com/trustedsec/social-engineer-toolkit.git'
 _install_pip 'pip3' '-r /workspace/social-engineer-toolkit/requirements.txt'
 # Install Recon-ng
-_install_git 'https://bitbucket.org/LaNMaSteR53/recon-ng.git'
+_install_git 'https://github.com/lanmaster53/recon-ng.git'
 _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
 # Install OpenVas
 _install_git 'https://github.com/greenbone/openvas.git'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_install_pip 'pip3' '-r /workspace/theHarvester/requirements.txt'
+_install_pip 'pip3' '-r /workspace/theHarvester/requirements/base.txt'
 # Install Cr3dOv3r
 _install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
 _install_pip 'pip3' '-r /workspace/Cr3dOv3r/requirements.txt'
@@ -70,11 +70,11 @@ _install_pip 'pip2' '-r /workspace/dnsrecon/requirements.txt'
 # Install Buster
 _install_git 'https://github.com/sham00n/buster.git'
 _install_pip 'pip3' 'numpy'
-_run "cd workspace/buster;python3 setup.py install;cd $here"
+_run "cd /workspace/buster;python3 setup.py install;cd $here"
 # Install Whois
 _run 'apk add whois nmap'
 # Install osrframework
-_install_pip 'pip2' 'osrframework'
+_install_pip 'pip3' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
 _run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
 # Install InstagramOsint
@@ -82,13 +82,13 @@ _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
 # Install Datasploit
 _install_git 'https://github.com/dvopsway/datasploit.git'
-_install_pip 'pip2.7' '--upgrade -r /workspace/datasploit/requirements.txt'
+_install_pip 'pip2' '--force-reinstall -r /workspace/datasploit/requirements.txt'
 # Install Cloudfail
 _install_git 'https://github.com/m0rtem/CloudFail.git'
 _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
 # Install WAFW00f
 _install_git 'https://github.com/EnableSecurity/wafw00f.git'
-_run "cd workspace/wafw00f;python3 setup.py install;cd $here"
+_run "cd /workspace/wafw00f;python3 setup.py install;cd $here"
 
 # Install editor
 _run 'apk add vim'
@@ -97,7 +97,7 @@ _run 'apk add vim'
 banner="
 
 \t\t ~$bwhite TOOLS $end~
-\t$bwhite Operative-framework$end: operative framework is a OSINT investigation framework
+\t$red We can help for install this framework [Update broken] → $bwhite Operative-framework$end: operative framework is a OSINT investigation framework
 \t$bwhite D4N155$end: Intelligent and dynamic wordlist using OSINT
 \t$bwhite Sherlock$end: Find usernames across social networks
 \t$bwhite PhoneInfoga$end: Advanced information gathering & OSINT tool for phone numbers
@@ -114,10 +114,10 @@ banner="
 \t$bwhite Datasploit$end: A tool to perform various OSINT techniques
 \t$bwhite Cloudfail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network
 
+\ttype: 'tool' to show this message
 "
 
-
 # bashrc
-_run 'wget https://raw.githubusercontent.com/Scorpion-Cyber-Security/vault-bash/master/.bashrc -O .bashrc'
+_run 'wget https://raw.githubusercontent.com/vault-cyber-security/vault-bash/master/.bashrc -O .bashrc'
 cat .bashrc >> ~/.bashrc
-echo -e "printf \"\"\"$banner\"\"\"" >> ~/.bashrc
+echo -e "printf \"\"\"$banner\"\"\";alias 'tools'=\"\"\"$banner\"\"\"" >> ~/.bashrc
