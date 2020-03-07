@@ -120,4 +120,4 @@ banner="
 # bashrc
 _run 'wget https://raw.githubusercontent.com/vault-cyber-security/vault-bash/master/.bashrc -O .bashrc'
 cat .bashrc >> ~/.bashrc
-echo -e "printf \"\"\"$banner\"\"\";alias 'tools'=\"\"\"$banner\"\"\"" >> ~/.bashrc
+echo -e "printf \"\"\"$banner\"\"\";alias 'tools'='\"\"\"$banner\"\"\"'" >> ~/.bashrc
