@@ -114,10 +114,10 @@ banner="
 \t$bwhite Datasploit$end: A tool to perform various OSINT techniques
 \t$bwhite Cloudfail$end: Utilize misconfigured DNS and old database records to find hidden IP\'s behind the CloudFlare network
 
-\ttype: 'tool' to show this message
+\ttype: 'tools' to show this message
 "
 
 # bashrc
 _run 'wget https://raw.githubusercontent.com/vault-cyber-security/vault-bash/master/.bashrc -O .bashrc'
 cat .bashrc >> ~/.bashrc
-echo -e "printf \"\"\"$banner\"\"\";alias 'tools'='\"\"\"$banner\"\"\"'" >> ~/.bashrc
+echo -e "printf \"\"\"$banner\"\"\";alias tools='echo \"\"\"$banner\"\"\"'" >> ~/.bashrc
