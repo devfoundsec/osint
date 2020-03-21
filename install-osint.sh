@@ -89,6 +89,9 @@ _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
 # Install WAFW00f
 _install_git 'https://github.com/EnableSecurity/wafw00f.git'
 _run "cd /workspace/wafw00f;python3 setup.py install;cd $here"
+# Install OWASP Maryam
+_install_git 'https://github.com/saeeddhqan/Maryam.git'
+_install_pip 'pip3 -r /workspace/Maryam/requirements'
 
 # Install editor
 _run 'apk add vim'
@@ -113,6 +116,7 @@ banner="
 \t$bwhite InstagramOsint$end: An Instagram Open Source Intelligence Tool 
 \t$bwhite Datasploit$end: A tool to perform various OSINT techniques
 \t$bwhite Cloudfail$end: Utilize misconfigured DNS and old database records to find hidden IPs behind the CloudFlare network
+\t$bwhite Maryam$and: Is an Open-source intelligence(OSINT) and Web-based Footprinting modular/tool framework based on the Recon-ng and written in Python.
 
 \ttype:$bwhite tools$end to show this message
 "
