@@ -30,4 +30,4 @@ The image was wrote for Security Osint with tools:
   -  Datasploit: __A tool to perform various OSINT techniques__
   -  Cloudfail: __Utilize misconfigured DNS and old database records to find hidden IP's behind the CloudFlare network__
   -  WAFW00F: __WAFW00F identifies and fingerprints Web Application Firewall (WAF) products__
-
+  -  OWASP Maryam: __Is an Open-source intelligence(OSINT) and Web-based Footprinting modular/tool framework based on the Recon-ng and written in Python.__
