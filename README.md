@@ -20,7 +20,6 @@ The image was wrote for Security Osint with tools:
   -  Karma: __Find leaked emails with your passwords__
   -  Recon-ng: __Recon-ng is a full-featured Web Reconnaissance framework written in Python__
   -  SE Toolkit: __The Social-Engineer Toolkit__
-  -  OpenVas: __Open Vulnerability Assessment Scanner__ 
   -  The Harvester: __E-mails, subdomains and names Harvester - OSINT__
   -  Whois: __Get whois data__
   -  osrframework: __Open Sources Research Framework__
@@ -32,3 +31,4 @@ The image was wrote for Security Osint with tools:
   -  WAFW00F: __WAFW00F identifies and fingerprints Web Application Firewall (WAF) products__
   -  OWASP Maryam: __Is an Open-source intelligence(OSINT) and Web-based Footprinting modular/tool framework based on the Recon-ng and written in Python.__
   -  Metabigor: __Is Intelligence tool, its goal is to do OSINT tasks and more but without any API key.__
+  -  Getrails: __Tool of OSINT and Dork hacking that work with Google, Duckduckgo and onion__
