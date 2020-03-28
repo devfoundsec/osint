@@ -57,7 +57,7 @@ _install_git 'https://github.com/lanmaster53/recon-ng.git'
 _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_install_pip 'pip3' '-r /workspace/theHarvester/requirements/base.txt'
+_run "cd /workspace/theHarvester/;python3 setup.py install;cd $here"
 # Install Cr3dOv3r
 _install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
 _install_pip 'pip3' '-r /workspace/Cr3dOv3r/requirements.txt'
@@ -73,7 +73,7 @@ _run 'apk add whois nmap'
 # Install osrframework
 _install_pip 'pip3' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
-_run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
+_run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/accounts.cfg -O ~/.config/OSRFramework/default/accounts.cfg'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
