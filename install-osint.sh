@@ -46,8 +46,7 @@ _install_git 'https://github.com/sherlock-project/sherlock.git'
 _install_pip 'pip3' '-r /workspace/sherlock/requirements.txt'
 # Install PhoneInfoga
 _install_git 'https://github.com/sundowndev/PhoneInfoga'
-_install_pip 'pip3' '-r /workspace/PhoneInfoga/requirements.txt'
-_run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
+_run 'go build -o /workspace/PhoneInfoga/phoneinfoga /workspace/PhoneInfoga/main.go'
 # Install Karma'
 _install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git --upgrade'
 # Install SE Toolkit 
@@ -75,6 +74,7 @@ _run 'apk add whois nmap'
 _install_pip 'pip3' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
 _run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
+_run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/accounts.cfg -O ~/.config/OSRFramework/default/accounts.cfg'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
