@@ -46,8 +46,7 @@ _install_git 'https://github.com/sherlock-project/sherlock.git'
 _install_pip 'pip3' '-r /workspace/sherlock/requirements.txt'
 # Install PhoneInfoga
 _install_git 'https://github.com/sundowndev/PhoneInfoga'
-_install_pip 'pip3' '-r /workspace/PhoneInfoga/requirements.txt'
-_run 'mv /workspace/PhoneInfoga/config.example.py /workspace/PhoneInfoga/config.py'
+_run 'go build -o /workspace/PhoneInfoga/phoneinfoga /workspace/PhoneInfoga/main.go'
 # Install Karma'
 _install_pip 'pip3' 'git+https://github.com/decoxviii/karma.git --upgrade'
 # Install SE Toolkit 
@@ -56,11 +55,9 @@ _install_pip 'pip3' '-r /workspace/social-engineer-toolkit/requirements.txt'
 # Install Recon-ng
 _install_git 'https://github.com/lanmaster53/recon-ng.git'
 _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
-# Install OpenVas
-_install_git 'https://github.com/greenbone/openvas.git'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_install_pip 'pip3' '-r /workspace/theHarvester/requirements/base.txt'
+_run "cd /workspace/theHarvester/;python3 setup.py install;cd $here"
 # Install Cr3dOv3r
 _install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
 _install_pip 'pip3' '-r /workspace/Cr3dOv3r/requirements.txt'
@@ -76,7 +73,8 @@ _run 'apk add whois nmap'
 # Install osrframework
 _install_pip 'pip3' 'osrframework'
 _run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/general.cfg -O ~/.config/OSRFramework/default/general.cfg'
-_run 'wget https://github.com/i3visio/osrframework/blob/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
+_run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/browser.cfg -O /root/.config/OSRFramework/default/browser.cfg'
+_run 'wget https://raw.githubusercontent.com/i3visio/osrframework/master/config/accounts.cfg -O ~/.config/OSRFramework/default/accounts.cfg'
 # Install InstagramOsint
 _install_git 'https://github.com/sc1341/InstagramOSINT.git'
 _install_pip 'pip3' '-r /workspace/InstagramOSINT/requirements.txt'
@@ -89,6 +87,14 @@ _install_pip 'pip3' '-r /workspace/CloudFail/requirements.txt'
 # Install WAFW00f
 _install_git 'https://github.com/EnableSecurity/wafw00f.git'
 _run "cd /workspace/wafw00f;python3 setup.py install;cd $here"
+# Install OWASP Maryam
+_install_git 'https://github.com/saeeddhqan/Maryam.git'
+_install_pip 'pip2'  '-r /workspace/Maryam/requirements'
+# Install Metabigor
+_run 'go get -u github.com/j3ssie/metabigor'
+# Installing getrails
+_install_git 'https://github.com/Vault-Cyber-Security/getrails-tool.git'
+_install_pip 'pip3' '-r /workspace/getrails-tool/requirements.txt'
 
 # Install editor
 _run 'apk add vim'
@@ -104,7 +110,6 @@ banner="
 \t$bwhite Karma$end: Find leaked emails with your passwords
 \t$bwhite Recon-ng$end: Recon-ng is a full-featured Web Reconnaissance framework written in Python
 \t$bwhite SE Toolkit$end: The Social-Engineer Toolkit
-\t$bwhite OpenVas$end: Open Vulnerability Assessment Scanner 
 \t$bwhite The Harvester$end: E-mails, subdomains and names Harvester - OSINT
 \t$bwhite Whois$end: Get whois data
 \t$bwhite osrframework$end: Open Sources Research Framework
@@ -113,6 +118,9 @@ banner="
 \t$bwhite InstagramOsint$end: An Instagram Open Source Intelligence Tool 
 \t$bwhite Datasploit$end: A tool to perform various OSINT techniques
 \t$bwhite Cloudfail$end: Utilize misconfigured DNS and old database records to find hidden IPs behind the CloudFlare network
+\t$bwhite Maryam$end: Is an Open-source intelligence(OSINT) and Web-based Footprinting modular/tool framework based on the Recon-ng and written in Python.
+\t$bwhite Metabigor$end: Is Intelligence tool, its goal is to do OSINT tasks and more but without any API key.
+\t$bwhite Getrails$end: Tool of OSINT and Dork hacking that work with Google, Duckduckgo and onion
 
 \ttype:$bwhite tools$end to show this message
 "

@@ -7,6 +7,6 @@ RUN apk update && apk add tor python2 python3 git bash gcc g++ libxslt-dev freet
   && wget -O /opt/osint/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz \
   && tar -C /opt/osint/ -xvf /opt/osint/geckodriver.tar.gz \
   && rm -rf /opt/osint/*tar.gz
-ENV PATH /usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/packages/src:/usr/local/go/bin:/opt/osint
+ENV PATH /usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/packages/src:/usr/local/go/bin:/opt/osint:/go/bin
 RUN bash /opt/osint/install-osint.sh
 ENTRYPOINT /bin/bash
