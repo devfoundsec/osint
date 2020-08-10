@@ -57,7 +57,9 @@ _install_git 'https://github.com/lanmaster53/recon-ng.git'
 _install_pip 'pip3' '-r /workspace/recon-ng/REQUIREMENTS'
 # Install The Harvester
 _install_git 'https://github.com/laramies/theHarvester.git'
-_run "cd /workspace/theHarvester/;python3 setup.py install;cd $here"
+_run "apk add build-base"
+_run "cd /workspace/theHarvester/;pip3 install -r requirements/base.txt;cd $here"
+_run "apk del build-base"
 # Install Cr3dOv3r
 _install_git 'https://github.com/D4Vinci/Cr3dOv3r.git'
 _install_pip 'pip3' '-r /workspace/Cr3dOv3r/requirements.txt'
