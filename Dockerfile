@@ -1,13 +1,12 @@
-FROM python:3
-COPY . /packages/src
+FROM golang:1.12.7-alpine
+COPY . /opt/osint
 WORKDIR /workspace
-RUN wget https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz \
-  && tar -xvf go1.12.6.linux-amd64.tar.gz && mv go /usr/local \
-  && apt-get update -y && apt-get install python2.7 -y \
-  && wget -O- -q https://bootstrap.pypa.io/get-pip.py | python2.7 \
-  && wget -O /packages/src/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz \
-  && tar -C /packages/src/ -xvf /packages/src/geckodriver.tar.gz
-ENV GOROOT /usr/local/go
-ENV GOPATH $HOME/Projects/Proj1
-ENV PATH /Projects/Proj1/bin:/usr/local/go/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/packages/src/
-RUN bash /packages/src/install-osint.sh
+RUN apk update && apk add tor python2 python3 git bash gcc g++ libxslt-dev freetds-dev python3-dev python2-dev openssl-dev musl-dev libffi-dev \
+  && wget https://bootstrap.pypa.io/get-pip.py -O- | python2.7 \
+  && wget https://bootstrap.pypa.io/get-pip.py -O- | python3.7 \
+  && wget -O /opt/osint/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz \
+  && tar -C /opt/osint/ -xvf /opt/osint/geckodriver.tar.gz \
+  && rm -rf /opt/osint/*tar.gz
+ENV PATH /usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/packages/src:/usr/local/go/bin:/opt/osint:/go/bin
+RUN bash /opt/osint/install-osint.sh
+ENTRYPOINT /bin/bash
