@@ -97,7 +97,10 @@ _run 'go get -u github.com/j3ssie/metabigor'
 # Installing getrails
 _install_git 'https://github.com/Vault-Cyber-Security/getrails-tool.git'
 _install_pip 'pip3' '-r /workspace/getrails-tool/requirements.txt'
-
+# Install Osmedeus
+_install_git 'https://github.com/j3ssie/Osmedeus'
+_install pip 'pip3' '-r /workspace/Osmedeus/requiriments.txt'
+_run 'bash install.sh'
 # Install editor
 _run 'apk add vim'
 
@@ -123,7 +126,7 @@ banner="
 \t$bwhite Maryam$end: Is an Open-source intelligence(OSINT) and Web-based Footprinting modular/tool framework based on the Recon-ng and written in Python.
 \t$bwhite Metabigor$end: Is Intelligence tool, its goal is to do OSINT tasks and more but without any API key.
 \t$bwhite Getrails$end: Tool of OSINT and Dork hacking that work with Google, Duckduckgo and onion
-
+\t$bwhite Osmedeus$end: Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
 \ttype:$bwhite tools$end to show this message
 "
 
