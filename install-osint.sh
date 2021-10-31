@@ -101,6 +101,9 @@ _install_pip 'pip3' '-r /workspace/getrails-tool/requirements.txt'
 _install_git 'https://github.com/j3ssie/Osmedeus'
 _install pip 'pip3' '-r /workspace/Osmedeus/requiriments.txt'
 _run 'bash install.sh'
+#install metabigor
+_run 'GO111MODULE=on go get -u github.com/j3ssie/metabigor'
+
 # Install editor
 _run 'apk add vim'
 
