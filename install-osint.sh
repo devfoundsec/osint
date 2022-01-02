@@ -101,6 +101,9 @@ _install_pip 'pip3' '-r /workspace/getrails-tool/requirements.txt'
 _install_git 'https://github.com/j3ssie/Osmedeus'
 _install pip 'pip3' '-r /workspace/Osmedeus/requiriments.txt'
 _run 'bash install.sh'
+#install metabigor
+_run 'GO111MODULE=on go get -u github.com/j3ssie/metabigor'
+
 # Install editor
 _run 'apk add vim'
 
@@ -127,6 +130,7 @@ banner="
 \t$bwhite Metabigor$end: Is Intelligence tool, its goal is to do OSINT tasks and more but without any API key.
 \t$bwhite Getrails$end: Tool of OSINT and Dork hacking that work with Google, Duckduckgo and onion
 \t$bwhite Osmedeus$end: Osmedeus allows you automated run the collection of awesome tools to reconnaissance and vulnerability scanning against the target.
+\t$bwhite Metabigor$end: Metabigor is Intelligence tool, its goal is to do OSINT tasks and more but without any API key.
 \ttype:$bwhite tools$end to show this message
 "
 
